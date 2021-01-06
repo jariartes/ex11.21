@@ -2,8 +2,9 @@
   "name": "bloglist-frontend-backend-app",
   "license": "MIT",
   "scripts": {
-    "build": "npm --prefix bloglist-frontend install && npm --prefix bloglist-frontend build",
+    "init-backend": "npm --prefix bloglist-backend install",
+    "build-client": "npm --prefix bloglist-frontend install && npm --prefix bloglist-frontend build",
     "deploy": "cp -r bloglist-frontend/build/. bloglist-backend/build/",
-    "heroku-postbuild": "npm build && npm deploy"
+    "heroku-postbuild": "npm run init-backend && npm run build-client && npm run deploy"
   }
 }
