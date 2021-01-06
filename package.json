@@ -1,0 +1,9 @@
+{
+  "name": "bloglist-frontend-backend-app",
+  "license": "MIT",
+  "scripts": {
+    "build": "npm --prefix bloglist-frontend install && npm --prefix bloglist-frontend build",
+    "deploy": "cp -r bloglist-frontend/build/. bloglist-backend/build/",
+    "heroku-postbuild": "npm build && npm deploy"
+  }
+}
