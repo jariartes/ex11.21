@@ -35,6 +35,7 @@ jobs:
           heroku_email: 'jari.artes@gmail.com'
           healthcheck: 'https://jariartes-ex11-21.herokuapp.com/health'
           checkstring: 'ok'
+          delay: 20
           rollbackonhealthcheckfailed: true
       - uses: actions/checkout@v2
       - name: Bump version and push tag
