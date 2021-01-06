@@ -3,7 +3,7 @@
   "license": "MIT",
   "scripts": {
     "init-backend": "npm --prefix bloglist-backend install",
-    "build-client": "npm --prefix bloglist-frontend install && npm --prefix bloglist-frontend build",
+    "build-client": "npm --prefix bloglist-frontend install && npm --prefix bloglist-frontend run build",
     "deploy": "cp -r bloglist-frontend/build/. bloglist-backend/build/",
     "heroku-postbuild": "npm run init-backend && npm run build-client && npm run deploy"
   }
